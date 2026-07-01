@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chess Intelligence — Search chess games, players, openings, and positions</title>
+  <meta name="description"
+    content="Chess Intelligence is a premium search and analysis platform for chess games, players, openings, PGNs, and positions.">
+  <link rel="icon" href="assets/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicons/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#" aria-label="Chess Intelligence home">
+        <img src="assets/logo/ci-mark.svg" alt="" class="brand-mark">
+        <span class="brand-name">chess<span>-</span>intelligence</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#how">How it works</a>
+        <a href="#explore">Explore</a>
+        <a href="#dossier">Reports</a>
+        <a href="#trust">Data</a>
+      </nav>
+      <div class="header-actions">
+        <a class="ghost-link" href="#">Sign in</a>
+        <a class="btn btn-small btn-quiet" href="#search">Start search</a>
+      </div>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"
+        data-menu-btn><span></span><span></span></button>
+    </div>
+    <div class="mobile-panel" data-mobile-panel>
+      <a href="#how">How it works</a><a href="#explore">Explore</a><a href="#dossier">Reports</a><a
+        href="#trust">Data</a><a href="#search">Start search</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="search" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="shell hero-shell">
+        <div class="hero-intro reveal">
+          <div class="eyebrow"><span class="live-dot"></span> 23,842,901 indexed games · updated 4 min ago</div>
+          <h1 id="hero-title">The search engine for serious chess research.</h1>
+          <p>Look up a player, opening, PGN, or position and get a precise dossier from recorded games — built for
+            preparation, commentary, coaching, and curiosity.</p>
+        </div>
+
+        <div class="search-console reveal" aria-label="Chess search interface">
+          <div class="console-header">
+            <div>
+              <span class="console-kicker">Run your first investigation</span>
+              <h2>Search by player, opening, PGN, or position.</h2>
+            </div>
+            <div class="index-badge"><strong data-counter="23842901">23,842,901</strong><span>games indexed</span></div>
+          </div>
+
+          <div class="mode-tabs" role="tablist" aria-label="Search modes">
+            <button class="mode-tab is-active" role="tab" aria-selected="true" data-tab="name">Player / Opening</button>
+            <button class="mode-tab" role="tab" aria-selected="false" data-tab="position">Position / PGN</button>
+          </div>
+
+          <div class="search-grid">
+            <section class="search-pane is-active" data-pane="name" aria-label="Player or opening search">
+              <form class="search-form" action="#dossier">
+                <label for="primary-search">Player, FIDE ID, opening, event, or ECO code</label>
+                <div class="search-bar">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m21 21-4.8-4.8M10.8 18.2a7.4 7.4 0 1 1 0-14.8 7.4 7.4 0 0 1 0 14.8Z" />
+                  </svg>
+                  <input id="primary-search" type="search" placeholder="Carlsen, 1503014, Sicilian Najdorf, B90..."
+                    autocomplete="off">
+                  <button type="submit">Search</button>
+                </div>
+                <div class="query-chips" aria-label="Example searches">
+                  <button type="button">Carlsen vs Nepomniachtchi</button>
+                  <button type="button">Queen's Gambit Declined</button>
+                  <button type="button">B90</button>
+                  <button type="button">Tata Steel 2024</button>
+                </div>
+              </form>
+              <div class="recent-feed">
+                <h3>Live searches</h3>
+                <ul>
+                  <li><span>player</span>Praggnanandhaa black repertoire</li>
+                  <li><span>opening</span>Berlin Endgame statistics</li>
+                  <li><span>position</span>after 1.e4 c5 2.Nf3 d6</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="search-pane position-pane" data-pane="position" aria-label="Position and PGN lookup">
+              <div class="position-copy">
+                <h3>Search from a board state.</h3>
+                <p>Paste FEN/PGN or use the board placeholder where your interactive board component can be dropped in.
+                </p>
+              </div>
+              <div class="board-card">
+                <div class="board-toolbar">
+                  <span>White to move</span>
+                  <button type="button">Reset</button>
+                  <button type="button">Undo</button>
+                </div>
+                <div class="board-stage"><img src="assets/illustrations/board-placeholder.svg"
+                    alt="Styled chessboard placeholder for position search"></div>
+                <label for="fen">FEN or PGN</label>
+                <textarea id="fen" rows="3" placeholder="Paste FEN or PGN here..."></textarea>
+                <button class="btn btn-primary full" type="button">Search this position</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" id="trust" aria-label="Platform signals">
+      <div class="shell trust-grid">
+        <div><strong>23.8M+</strong><span>indexed games</span></div>
+        <div><strong>194K+</strong><span>players linked</span></div>
+        <div><strong>6.2M</strong><span>opening positions</span></div>
+        <div><strong>PGN</strong><span>source references</span></div>
+        <div><strong>Daily</strong><span>freshness checks</span></div>
+      </div>
+    </section>
+
+    <section class="section dossier" id="dossier">
+      <div class="shell two-col">
+        <div class="section-copy reveal">
+          <span class="section-label">Result preview</span>
+          <h2>A chess dossier, not a list of links.</h2>
+          <p>Every search is organized into player identity, opening tendencies, comparable games, result distribution,
+            PGN references, and source freshness.</p>
+          <a href="#search" class="text-link">Try a sample search →</a>
+        </div>
+        <div class="case-file reveal">
+          <div class="file-top"><span>CONFIDENCE 94%</span><span>PGN AVAILABLE</span></div>
+          <h3>Carlsen · Black repertoire vs 1.e4</h3>
+          <div class="stat-row">
+            <div><b>48%</b><span>Sicilian</span></div>
+            <div><b>27%</b><span>e5 systems</span></div>
+            <div><b>11%</b><span>Caro-Kann</span></div>
+          </div>
+          <article class="game-row"><span class="mono">2024</span>
+            <div><b>Carlsen 2830 — Firouzja 2760</b>
+              <p>Sicilian Defense · 1.e4 c5 2.Nf3 d6 3.d4...</p>
+            </div><a href="#">PGN</a>
+          </article>
+          <article class="game-row"><span class="mono">2023</span>
+            <div><b>Gukesh 2725 — Carlsen 2853</b>
+              <p>Open Game · 1.e4 e5 2.Nf3 Nc6 3.Bb5...</p>
+            </div><a href="#">PGN</a>
+          </article>
+          <article class="game-row"><span class="mono">2022</span>
+            <div><b>Caruana 2783 — Carlsen 2864</b>
+              <p>Caro-Kann · 1.e4 c6 2.d4 d5 3.Nc3...</p>
+            </div><a href="#">PGN</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section explore" id="explore">
+      <div class="shell">
+        <div class="section-heading reveal"><span class="section-label">Explore</span>
+          <h2>Paths into the archive.</h2>
+          <p>Search is the center, but discovery keeps the product alive.</p>
+        </div>
+        <div class="cards-3">
+          <article class="explore-card reveal"><span class="card-icon">♞</span>
+            <h3>Trending players</h3>
+            <p>See who is being investigated this week and what changed in their recent games.</p>
+            <ul>
+              <li>Abdusattorov</li>
+              <li>Ju Wenjun</li>
+              <li>Arjun Erigaisi</li>
+            </ul>
+          </article>
+          <article class="explore-card reveal"><span class="card-icon">♟</span>
+            <h3>Opening laboratory</h3>
+            <p>Browse openings by ECO, score, popularity, and novelty frequency.</p>
+            <ul>
+              <li>B90 Najdorf</li>
+              <li>D37 QGD</li>
+              <li>C65 Berlin</li>
+            </ul>
+          </article>
+          <article class="explore-card reveal"><span class="card-icon">⌕</span>
+            <h3>Position index</h3>
+            <p>Paste a position and find matching games, transpositions, and player tendencies.</p>
+            <ul>
+              <li>Exact FEN</li>
+              <li>PGN import</li>
+              <li>Side-to-move filters</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture">
+      <div class="shell intelligence-panel reveal">
+        <div><span class="section-label">Data intelligence</span>
+          <h2>Built like a research instrument.</h2>
+          <p>Chess Intelligence combines PGN crawling, duplicate detection, player identity resolution, ECO
+            classification, and position hashing into a single clear interface.</p>
+        </div>
+        <img src="assets/illustrations/data-orbit.svg"
+          alt="Data network showing PGN source, opening index, player dossier, and position hash">
+      </div>
+    </section>
+
+    <section class="section how" id="how">
+      <div class="shell">
+        <div class="section-heading reveal"><span class="section-label">How it works</span>
+          <h2>From query to preparation in seconds.</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><span>01</span>
+            <h3>Ask like a player</h3>
+            <p>Search a name, FIDE ID, opening code, event, PGN, or board state.</p>
+          </li>
+          <li class="reveal"><span>02</span>
+            <h3>We resolve the archive</h3>
+            <p>The platform matches players, positions, openings, dates, and source references.</p>
+          </li>
+          <li class="reveal"><span>03</span>
+            <h3>Read the report</h3>
+            <p>Get game rows, tendencies, confidence signals, and exportable PGN paths.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="shell cta-inner reveal">
+        <h2>Ready to investigate your next game?</h2>
+        <p>Start with a player, opening, PGN, or position. The first search should take less than five seconds.</p>
+        <a class="btn btn-primary" href="#search">Run a search</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div><a class="brand footer-brand" href="#"><img src="assets/logo/ci-mark.svg" alt=""><span
+            class="brand-name">chess<span>-</span>intelligence</span></a>
+        <p>Google-level restraint for chess research. Built for players, coaches, commentators, and curious analysts.
+        </p>
+      </div>
+      <nav aria-label="Footer"><a href="#">About</a><a href="#">Data sources</a><a href="#">Privacy</a><a
+          href="#">Contact</a></nav>
+      <div class="footer-note">No engine evaluation shown here — just search, games, sources, and trustworthy chess
+        context.</div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

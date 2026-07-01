@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+<title id="t">Chess Intelligence mark</title><desc id="d">A knight head integrated with a search lens.</desc>
+<defs><linearGradient id="g" x1="12" x2="54" y1="8" y2="58"><stop stop-color="#f5c45e"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient></defs>
+<rect width="64" height="64" rx="16" fill="#0b1018"/>
+<path d="M39 14c-6 1-11 4-14 9l-5 8 8 2-4 10h23c1-7-1-12-7-15l-4-2 5-3c2-1 2-5-2-9Z" fill="none" stroke="url(#g)" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="29" cy="26" r="2" fill="#f5c45e"/>
+<path d="M45 45l8 8" stroke="#7dd3fc" stroke-width="4" stroke-linecap="round"/>
+</svg>
